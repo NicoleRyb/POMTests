@@ -1,4 +1,4 @@
-package BookStore;
+package BookStore.POM;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,25 +8,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class CartPage {
-    By productItem = By.cssSelector("tr.cart_item");
-    By quantityField = By.cssSelector("input.qty");
-    By updateCart = By.cssSelector("[name='update_cart']");
-    By totalPrice = By.cssSelector("[data-title='Total']");
+public class CartPage extends BasePage{
+    private By productItem = By.cssSelector("tr.cart_item");
+    private By quantityField = By.cssSelector("input.qty");
+    private By updateCart = By.cssSelector("[name='update_cart']");
+    private By totalPrice = By.cssSelector("[data-title='Total']");
 
-
-    private final WebDriver driver;
     public CartPage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
     public void go() {
-        String baseURL = "http://localhost:8080";
         driver.get(baseURL + "/cart/");
     }
     public int getNumberOfProducts() {
         return driver.findElements(productItem).size();
     }
-    public void type(String text) {
+    public void changeNumber(String text) {
         WebElement field = driver.findElement(quantityField);
         field.clear();
         field.sendKeys(text);
@@ -35,9 +32,8 @@ public class CartPage {
         driver.findElement(updateCart).click();
     }
 
-    public void waitToDisappear(String cssSelector, int seconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(cssSelector), 0));
+    public void waitToDisappear() {
+        waitForLoadingIconDisappear();
     }
 
     public String getText() {
@@ -46,5 +42,14 @@ public class CartPage {
 
     public WebElement findElement(){
         return driver.findElement(updateCart);
+    }
+
+    public CartPage changeQuantity(int quantity) {
+        driver.findElement(quantityField).clear();
+        driver.findElement(quantityField).sendKeys(String.valueOf(quantity));
+        driver.findElement(updateCart).click();
+
+        waitForLoadingIconDisappear();
+        return this;
     }
 }
