@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1e759b2-0d15-4781-a3d0-6941432bb107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/StoreHeaderComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/WishlistPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/helpers/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/helpers/BrowserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/helpers/ConfigurationReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/helpers/NoSuchBrowserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/configuration.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/ProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/StoreHeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/StoreHeaderComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/WishlistPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/WishlistPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +55,27 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="BookStore.helpers" />
       <recent name="BookStore.POM" />
       <recent name="BookStore" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CartTests.noProductAddedToCartShouldCartBeEmpty">
+  <component name="RunManager" selected="JUnit.CartTests">
+    <configuration name="CartTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookStore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BookStore" />
+      <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CartTests.addProductToCartShouldShowProductPriceInMiniCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
@@ -66,38 +87,6 @@
       <option name="PACKAGE_NAME" value="BookStore" />
       <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
       <option name="METHOD_NAME" value="addProductToCartShouldShowProductPriceInMiniCart" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CartTests.cartNotChangedShouldUpdateButtonBeDisabled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BookStore.POM.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BookStore" />
-      <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
-      <option name="METHOD_NAME" value="cartNotChangedShouldUpdateButtonBeDisabled" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CartTests.changingQuantityInCartShouldChangeTotalPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BookStore.POM.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BookStore" />
-      <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
-      <option name="METHOD_NAME" value="changingQuantityInCartShouldChangeTotalPrice" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,13 +124,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WishlistTests.productAddedToWishlistShouldWishlistHaveOneItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookStore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BookStore" />
+      <option name="MAIN_CLASS_NAME" value="BookStore.WishlistTests" />
+      <option name="METHOD_NAME" value="productAddedToWishlistShouldWishlistHaveOneItem" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CartTests" />
         <item itemvalue="JUnit.CartTests.noProductAddedToCartShouldCartBeEmpty" />
-        <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
-        <item itemvalue="JUnit.CartTests.cartNotChangedShouldUpdateButtonBeDisabled" />
+        <item itemvalue="JUnit.WishlistTests.productAddedToWishlistShouldWishlistHaveOneItem" />
         <item itemvalue="JUnit.CartTests.changingQuantityInCartToNegativeShouldNotChangeTotalPrice" />
-        <item itemvalue="JUnit.CartTests.changingQuantityInCartShouldChangeTotalPrice" />
+        <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
       </list>
     </recent_temporary>
   </component>

@@ -2,13 +2,9 @@ package BookStore;
 
 import BookStore.POM.CartPage;
 import BookStore.POM.ProductPage;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CartTests extends BaseTests{
     String calculusSlug = "/calculus-made-easy-by-silvanus-p-thompson/";
@@ -16,16 +12,14 @@ public class CartTests extends BaseTests{
 
     @Test
     public void noProductAddedToCartShouldCartBeEmpty(){
-        CartPage cartPage = new CartPage(driver);
-        cartPage.go();
-
+        CartPage cartPage = new CartPage(browser).go();
         Assertions.assertEquals(0,
                 cartPage.getNumberOfProducts(),
                 "Product table was find in the cart while no product was added.");
     }
     @Test
     public void productAddedToCartShouldCartHaveOneProducts(){
-        ProductPage productPage = new ProductPage(driver);
+        ProductPage productPage = new ProductPage(browser);
         CartPage cartPage = productPage.go(calculusSlug).addToCart().goToCart();
         int numberOfProducts = cartPage.getNumberOfProducts();
 
@@ -35,7 +29,7 @@ public class CartTests extends BaseTests{
     }
     @Test
     public void twoProductsAddedToCartShouldCartHaveTwoProducts(){
-        ProductPage productPage = new ProductPage(driver);
+        ProductPage productPage = new ProductPage(browser);
         CartPage cartPage = productPage
                 .go(calculusSlug).addToCart()
                 .go(historyOfAstronomySlug).addToCart().goToCart();
@@ -48,7 +42,7 @@ public class CartTests extends BaseTests{
     }
     @Test
     public void changingQuantityInCartShouldChangeTotalPrice() {
-        ProductPage productPage = new ProductPage(driver);
+        ProductPage productPage = new ProductPage(browser);
         CartPage cartPage = productPage
                 .go(calculusSlug).addToCart().goToCart();
         cartPage.changeNumber("3");
@@ -62,9 +56,9 @@ public class CartTests extends BaseTests{
     }
     @Test
     public void changingQuantityInCartToNegativeShouldNotChangeTotalPrice(){
-        ProductPage productPage = new ProductPage(driver);
+        ProductPage productPage = new ProductPage(browser);
         CartPage cartPage = productPage
-                .go(calculusSlug).addToCart().goToCart().changeQuantity(3);
+                .go(calculusSlug).addToCart().goToCart().changeQuantity(-3);
 
         Assertions.assertEquals("13,00 €",
                 cartPage.getText(),
@@ -72,9 +66,9 @@ public class CartTests extends BaseTests{
     }
     @Test
     public void cartNotChangedShouldUpdateButtonBeDisabled(){
-        ProductPage productPage = new ProductPage(driver);
+        ProductPage productPage = new ProductPage(browser);
         productPage.go(calculusSlug).addToCart();
-        CartPage cartPage = new CartPage(driver);
+        CartPage cartPage = new CartPage(browser);
         cartPage.go();
         WebElement updateCart = cartPage.findElement();
 
@@ -83,7 +77,7 @@ public class CartTests extends BaseTests{
     }
     @Test
     public void addProductToCartShouldShowProductPriceInMiniCart() {
-        ProductPage productPage = new ProductPage(driver);
+        ProductPage productPage = new ProductPage(browser);
         productPage.go(historyOfAstronomySlug).addToCart().openMiniCart();
         productPage.waitToBePresent(5);
 
