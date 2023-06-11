@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1e759b2-0d15-4781-a3d0-6941432bb107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/ProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/StoreHeaderComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/WishlistPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/ProductPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +43,23 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop"
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "/home/nrybakiewicz/projects/selenium-course",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="BookStore.POM" />
       <recent name="BookStore" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart">
+  <component name="RunManager" selected="JUnit.CartTests.noProductAddedToCartShouldCartBeEmpty">
     <configuration name="CartTests.addProductToCartShouldShowProductPriceInMiniCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookStore.*" />
+          <option name="PATTERN" value="BookStore.POM.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,7 +75,7 @@
       <module name="selenium-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookStore.*" />
+          <option name="PATTERN" value="BookStore.POM.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,7 +91,7 @@
       <module name="selenium-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookStore.*" />
+          <option name="PATTERN" value="BookStore.POM.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,7 +107,7 @@
       <module name="selenium-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookStore.*" />
+          <option name="PATTERN" value="BookStore.POM.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,17 +119,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTests.twoProductsAddedToCartShouldCartHaveTwoProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTests.noProductAddedToCartShouldCartBeEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookStore.*" />
+          <option name="PATTERN" value="BookStore.POM.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="BookStore" />
       <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
-      <option name="METHOD_NAME" value="twoProductsAddedToCartShouldCartHaveTwoProducts" />
+      <option name="METHOD_NAME" value="noProductAddedToCartShouldCartBeEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CartTests.noProductAddedToCartShouldCartBeEmpty" />
         <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
         <item itemvalue="JUnit.CartTests.cartNotChangedShouldUpdateButtonBeDisabled" />
         <item itemvalue="JUnit.CartTests.changingQuantityInCartToNegativeShouldNotChangeTotalPrice" />
         <item itemvalue="JUnit.CartTests.changingQuantityInCartShouldChangeTotalPrice" />
-        <item itemvalue="JUnit.CartTests.twoProductsAddedToCartShouldCartHaveTwoProducts" />
       </list>
     </recent_temporary>
   </component>
