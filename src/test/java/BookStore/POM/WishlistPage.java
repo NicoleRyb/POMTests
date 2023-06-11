@@ -1,14 +1,14 @@
 package BookStore.POM;
 
+import BookStore.helpers.Browser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class WishlistPage extends BasePage{
 
     private By productItems = By.cssSelector(".wishlist-items-wrapper tr td.product-remove");
 
-    protected WishlistPage(WebDriver driver) {
-        super(driver);
+    protected WishlistPage(Browser browser) {
+        super(browser);
     }
 
     public int getNumberOfProducts() {

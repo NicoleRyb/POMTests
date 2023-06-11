@@ -1,18 +1,33 @@
 package BookStore;
 
+import BookStore.helpers.Browser;
+import BookStore.helpers.BrowserFactory;
+import BookStore.helpers.ConfigurationReader;
+import BookStore.helpers.NoSuchBrowserException;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTests {
-    WebDriver driver;
-    @BeforeEach
-    public void setup(){
-        driver = new ChromeDriver();
+    protected Browser browser;
+    private static ConfigurationReader configuration;
+    @BeforeAll
+    public static void  loadConfiguration(){
+        configuration = new ConfigurationReader();
     }
+    @BeforeEach
+    public void setup() {
+        BrowserFactory browserFactory = new BrowserFactory();
+        try {
+            browser = browserFactory.createInstance(configuration);
+        } catch (NoSuchBrowserException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @AfterEach
     public void quitDriver(){
-        driver.quit();
+        browser.driver().quit();
     }
 }

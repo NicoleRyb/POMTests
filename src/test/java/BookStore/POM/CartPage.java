@@ -1,24 +1,20 @@
 package BookStore.POM;
 
+import BookStore.helpers.Browser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class CartPage extends BasePage{
     private By productItem = By.cssSelector("tr.cart_item");
     private By quantityField = By.cssSelector("input.qty");
     private By updateCart = By.cssSelector("[name='update_cart']");
     private By totalPrice = By.cssSelector("[data-title='Total']");
-
-    public CartPage(WebDriver driver){
-        super(driver);
+    public CartPage(Browser browser){
+        super(browser);
     }
-    public void go() {
+    public CartPage go() {
         driver.get(baseURL + "/cart/");
+        return this;
     }
     public int getNumberOfProducts() {
         return driver.findElements(productItem).size();
