@@ -10,6 +10,7 @@ public class ConfigurationReader {
     private final String browser;
     private final String headless;
     private final String baseURL;
+    private String waitInSeconds;
 
     public ConfigurationReader(){
         String configurationPath = "src/test/resources/configuration.properties";
@@ -31,6 +32,7 @@ public class ConfigurationReader {
         browser = properties.getProperty("browser");
         headless = properties.getProperty("headless");
         baseURL = properties.getProperty("baseURL");
+        waitInSeconds = properties.getProperty("waitInSeconds");
     }
 
     public String getBrowser() {
@@ -46,5 +48,10 @@ public class ConfigurationReader {
     public String getBaseURL() {
         if(!baseURL.isEmpty()) return baseURL;
         else throw new RuntimeException("\"baseURL\" is not specified in the configuration.properties file.");
+    }
+
+    public int getWaitInSeconds() {
+        if(!waitInSeconds.isEmpty()) return Integer.parseInt(waitInSeconds);
+        else throw new RuntimeException("\"waitInSeconds\" is not specified in the configuration.properties file.");
     }
 }

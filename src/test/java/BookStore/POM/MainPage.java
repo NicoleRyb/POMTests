@@ -8,10 +8,8 @@ public class MainPage extends BasePage{
         super(browser);
         storeHeader = new StoreHeaderComponent(browser);
     }
-
     public MainPage go() {
         driver.get(baseURL);
         return this;
     }
-
 }

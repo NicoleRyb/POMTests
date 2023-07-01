@@ -7,7 +7,6 @@ import BookStore.helpers.NoSuchBrowserException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.WebDriver;
 
 public class BaseTests {
     protected Browser browser;
@@ -28,6 +27,6 @@ public class BaseTests {
 
     @AfterEach
     public void quitDriver(){
-        browser.driver().quit();
+        browser.driver.quit();
     }
 }

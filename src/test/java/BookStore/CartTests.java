@@ -82,7 +82,16 @@ public class CartTests extends BaseTests{
         productPage.waitToBePresent(5);
 
         Assertions.assertEquals("12,00 €",
-                productPage.findElement().getText(),
+                productPage.priceInMiniCart().getText(),
                 "The price displayed in minicart is not correct.");
+    }
+    @Test
+    public void addProductToCartShouldShowProductPriceInHeader() {
+        ProductPage productPage = new ProductPage(browser);
+        productPage.go(historyOfAstronomySlug).addToCart();
+
+        Assertions.assertEquals("12,00 €",
+                productPage.priceInHeader().getText(),
+                "The price displayed in the header is not correct.");
     }
 }
