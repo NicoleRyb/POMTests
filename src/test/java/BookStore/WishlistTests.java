@@ -23,5 +23,8 @@ public class WishlistTests extends BaseTests{
         MainPage mainPage = new MainPage(browser);
         WishlistPage wishlistPage = mainPage.go().storeHeader.goToWishlist();
 
+        Assertions.assertEquals(0,
+                wishlistPage.getNumberOfProducts(),
+                "Number of products in wishlist is not what expected.");
     }
 }
