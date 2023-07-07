@@ -15,6 +15,7 @@ public class ProductPage extends BasePage{
     private By totalPriceInMiniCart = By.cssSelector(".wc-block-components-totals-item__value");
     private By totalPriceInHeader = By.cssSelector(".wc-block-mini-cart__amount");
     private By addToWishlist = By.cssSelector("a.add_to_wishlist");
+    private By removeFromWishlist = By.cssSelector(".delete_item");
     public final StoreHeaderComponent storeHeader;
     public ProductPage(Browser browser) {
         super(browser);
@@ -35,9 +36,9 @@ public class ProductPage extends BasePage{
     public void openMiniCart() {
         driver.findElement(miniCart).click();
     }
-    public void waitToBePresent(int seconds) {
+    public void waitToBePresent(String locator, int seconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        wait.until(ExpectedConditions.presenceOfElementLocated(totalPriceInMiniCart));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(locator)));
     }
     public WebElement priceInMiniCart(){
         return driver.findElement(totalPriceInMiniCart);
@@ -47,6 +48,11 @@ public class ProductPage extends BasePage{
     }
     public ProductPage addToWishlist() {
         driver.findElement(addToWishlist).click();
+        waitForLoadingIconDisappear();
+        return this;
+    }
+    public ProductPage removeFromList() {
+        driver.findElement(removeFromWishlist).click();
         waitForLoadingIconDisappear();
         return this;
     }
