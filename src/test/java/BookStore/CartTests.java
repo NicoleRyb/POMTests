@@ -4,6 +4,7 @@ import BookStore.POM.CartPage;
 import BookStore.POM.ProductPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 
 public class CartTests extends BaseTests{
@@ -94,5 +95,14 @@ public class CartTests extends BaseTests{
         Assertions.assertEquals("12,00 €",
                 productPage.priceInHeader().getText(),
                 "The price displayed in the header is not correct.");
+    }
+    @Test
+    public void deleteCookieTest(){
+        ProductPage productPage = new ProductPage(browser);
+        productPage.go(calculusSlug).addToCart();
+        Cookie itemsInCartCookie = browser.driver.manage().getCookieNamed("woocommerce_items_in_cart");
+        int size = browser.driver.manage().getCookies().size();
+        browser.driver.manage().deleteCookie(itemsInCartCookie);
+        Assertions.assertEquals(size - 1, browser.driver.manage().getCookies().size());
     }
 }
