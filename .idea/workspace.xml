@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1e759b2-0d15-4781-a3d0-6941432bb107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/MainPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/CartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nrybakiewicz/projects/selenium-tests&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nrybakiewicz/projects/selenium-course-extra&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
 }</component>
@@ -55,24 +51,7 @@
       <recent name="BookStore" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WishlistTests.noProductAddedToWishlistShouldWishlistBeEmpty">
-    <configuration name="AllTests" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="selenium-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BookStore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BookStore" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea -Djunit.jupiter.execution.parallel.enabled=true -Djunit.jupiter.execution.parallel.mode.default=same_thread -Djunit.jupiter.execution.parallel.mode.classes.default=concurrent" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MainPageTests.sortByPriceTest">
     <configuration name="CartTests.addProductToCartShouldShowProductPriceInMiniCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
@@ -89,7 +68,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckoutTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTests.cookiesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
         <pattern>
@@ -98,8 +77,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="BookStore" />
-      <option name="MAIN_CLASS_NAME" value="BookStore.CheckoutTests" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
+      <option name="METHOD_NAME" value="cookiesTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTests.sortByPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookStore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BookStore" />
+      <option name="MAIN_CLASS_NAME" value="BookStore.MainPageTests" />
+      <option name="METHOD_NAME" value="sortByPriceTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,19 +133,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.CartTests.cookiesTest" />
+      <item itemvalue="JUnit.MainPageTests.sortByPriceTest" />
       <item itemvalue="JUnit.WishlistTests.noProductAddedToWishlistShouldWishlistBeEmpty" />
       <item itemvalue="JUnit.WishlistTests.removeProductFromWishlist" />
       <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
-      <item itemvalue="JUnit.CheckoutTests.test" />
-      <item itemvalue="JUnit.AllTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainPageTests.sortByPriceTest" />
         <item itemvalue="JUnit.WishlistTests.noProductAddedToWishlistShouldWishlistBeEmpty" />
+        <item itemvalue="JUnit.CartTests.cookiesTest" />
         <item itemvalue="JUnit.WishlistTests.removeProductFromWishlist" />
         <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
-        <item itemvalue="JUnit.AllTests" />
-        <item itemvalue="JUnit.CheckoutTests.test" />
       </list>
     </recent_temporary>
   </component>
