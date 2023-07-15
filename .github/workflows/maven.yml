@@ -41,6 +41,18 @@ jobs:
 
         cache: maven
 
+    - name: Download Chrome
+
+      run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+    - name: Install Chrome
+
+      run: sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+    - name: Install Allure
+
+      run: sudo apt-add-repository ppa:qameta/allure && sudo apt-get update && sudo apt-get -y install allure
+
     - name: Build with Maven
 
       run: mvn clean test
