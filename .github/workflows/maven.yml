@@ -49,10 +49,24 @@ jobs:
 
       run: sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+    - name: Download Allure
+
+      run: wget https://github.com/allure-framework/allure2/releases/download/2.23.0/allure_2.23.0-1_all.deb
+
     - name: Install Allure
 
-      run: sudo apt-add-repository ppa:qameta/allure && sudo apt-get update && sudo apt-get -y install allure
+      run: sudo dpkg -i allure_2.23.0-1_all.deb
 
     - name: Build with Maven
 
       run: mvn clean test
+
+    - name: Generate report
+
+      run: allure generate
+
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: allure-report
+        path: target/allure-results
