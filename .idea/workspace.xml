@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1e759b2-0d15-4781-a3d0-6941432bb107" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookStore/helpers/TestStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/selenium.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/BaseTests.java" afterDir="false" />
     </list>
@@ -39,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nrybakiewicz/projects/selenium-course-extra&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nrybakiewicz/projects/Java-POM-allure&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
 }</component>
@@ -50,7 +50,7 @@
       <recent name="BookStore" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CartTests.addProductToCartShouldShowProductPriceInHeader">
+  <component name="RunManager" selected="JUnit.WishlistTests.removeProductFromWishlist">
     <configuration name="CartTests.addProductToCartShouldShowProductPriceInHeader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
@@ -140,11 +140,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WishlistTests.removeProductFromWishlist" />
         <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInHeader" />
         <item itemvalue="JUnit.MainPageTests.sortByPriceTest" />
         <item itemvalue="JUnit.WishlistTests.noProductAddedToWishlistShouldWishlistBeEmpty" />
         <item itemvalue="JUnit.CartTests.cookiesTest" />
-        <item itemvalue="JUnit.WishlistTests.removeProductFromWishlist" />
       </list>
     </recent_temporary>
   </component>

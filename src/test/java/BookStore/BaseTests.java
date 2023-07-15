@@ -43,10 +43,6 @@ public class BaseTests {
         browser.driver.manage().window().maximize();
     }
 
-//    @AfterEach
-//    public void quitDriver(){
-//        browser.driver.quit();
-//    }
     @AfterEach
     public void afterEach(TestInfo info){
         if(status.isFailed){
