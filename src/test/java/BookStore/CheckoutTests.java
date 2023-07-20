@@ -42,6 +42,6 @@ public class CheckoutTests extends BaseTests {
         checkoutPage.placeOrder();
         checkoutPage.waitForLoadingIconDisappear();
 
-        Assertions.assertEquals("Order received", checkoutPage.checkTitle().getText(), "\"Order received\" text is not found in the header. Order was probably not successful.");
+        Assertions.assertEquals("Order received", checkoutPage.getTitle().getText(), "\"Order received\" text is not found in the header. Order was probably not successful.");
     }
 }

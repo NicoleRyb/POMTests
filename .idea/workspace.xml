@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e759b2-0d15-4781-a3d0-6941432bb107" name="Changes" comment="" />
+    <list default="true" id="e1e759b2-0d15-4781-a3d0-6941432bb107" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/CheckoutTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/POM/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookStore/WishlistTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,21 +72,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BookStore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BookStore" />
-      <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CartTests.addProductToCartShouldShowProductPriceInMiniCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-course" />
       <extension name="coverage">
@@ -92,6 +83,22 @@
       <option name="PACKAGE_NAME" value="BookStore" />
       <option name="MAIN_CLASS_NAME" value="BookStore.CartTests" />
       <option name="METHOD_NAME" value="addProductToCartShouldShowProductPriceInMiniCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutTests.validCheckoutDataShouldOrderBePlaced" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookStore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BookStore" />
+      <option name="MAIN_CLASS_NAME" value="BookStore.CheckoutTests" />
+      <option name="METHOD_NAME" value="validCheckoutDataShouldOrderBePlaced" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,7 +137,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CartTests" />
+      <item itemvalue="JUnit.CheckoutTests.validCheckoutDataShouldOrderBePlaced" />
       <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
       <item itemvalue="JUnit.WishlistTests.productAddedToWishlistShouldWishlistHaveOneItem" />
       <item itemvalue="JUnit.WishlistTests.noProductAddedToWishlistShouldWishlistBeEmpty" />
@@ -139,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in package" />
+        <item itemvalue="JUnit.CheckoutTests.validCheckoutDataShouldOrderBePlaced" />
         <item itemvalue="JUnit.WishlistTests.noProductAddedToWishlistShouldWishlistBeEmpty" />
         <item itemvalue="JUnit.WishlistTests.productAddedToWishlistShouldWishlistHaveOneItem" />
         <item itemvalue="JUnit.CartTests.addProductToCartShouldShowProductPriceInMiniCart" />
-        <item itemvalue="JUnit.CartTests" />
       </list>
     </recent_temporary>
   </component>

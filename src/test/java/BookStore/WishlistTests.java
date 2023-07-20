@@ -43,8 +43,8 @@ public class  WishlistTests extends BaseTests{
 
         Wait<WebDriver> wait = new FluentWait<WebDriver>(browser.driver)
                 .withTimeout(Duration.ofSeconds(5))
-                        .pollingEvery(Duration.ofSeconds(1))
-                                .ignoring(NoSuchElementException.class);
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
         productPage.removeFromList(5);
 
         Assertions.assertDoesNotThrow(() -> productPage.waitToBeDeleted(5),"Product has not been removed from wishlist");

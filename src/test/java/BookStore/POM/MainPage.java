@@ -9,6 +9,7 @@ public class MainPage extends BasePage{
     public final StoreHeaderComponent storeHeader;
     private By orderBy = By.cssSelector(".orderby");
     private By actualPrice = By.cssSelector("ins>span:nth-child(1)[class='woocommerce-Price-amount amount']");
+    private String price = "price";
     public MainPage(Browser browser) {
         super(browser);
         storeHeader = new StoreHeaderComponent(browser);
@@ -20,7 +21,7 @@ public class MainPage extends BasePage{
     public void sortByPrice() {
         WebElement selectElement = driver.findElement(orderBy);
         Select select = new Select(selectElement);
-        select.selectByValue("price");
+        select.selectByValue(price);
     }
     public String getPrice() {
         return driver.findElement(actualPrice).getText();

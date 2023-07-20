@@ -20,6 +20,7 @@ public class CheckoutPage extends BasePage{
     By cardNumberLocator = By.cssSelector("[name='cardnumber']");
     By expDateLocator = By.cssSelector("[name='exp-date']");
     By cvcLocator = By.cssSelector("[name='cvc']");
+    By headerTitle = By.cssSelector(".entry-title");
 
     public CheckoutPage(Browser browser) {
         super(browser);
@@ -86,7 +87,7 @@ public class CheckoutPage extends BasePage{
     public void placeOrder() {
         driver.findElement(placeOrder).click();
     }
-    public WebElement checkTitle() {
-        return driver.findElement(By.cssSelector(".entry-title"));
+    public WebElement getTitle() {
+        return driver.findElement(headerTitle);
     }
 }
