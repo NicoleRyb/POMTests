@@ -17,13 +17,11 @@ public class MainPage extends BasePage{
         driver.get(baseURL);
         return this;
     }
-
     public void sortByPrice() {
         WebElement selectElement = driver.findElement(orderBy);
         Select select = new Select(selectElement);
         select.selectByValue("price");
     }
-
     public String getPrice() {
         return driver.findElement(actualPrice).getText();
     }

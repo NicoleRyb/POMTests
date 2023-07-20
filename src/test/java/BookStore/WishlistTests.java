@@ -15,8 +15,7 @@ import java.time.Duration;
 
 public class  WishlistTests extends BaseTests{
     String calculusSlug = "/calculus-made-easy-by-silvanus-p-thompson/";
-    String deleteItem = ".delete_item";
-    String addToWishlist = ".add_to_wishlist";
+
 
     @Test
     public void productAddedToWishlistShouldWishlistHaveOneItem(){
@@ -41,13 +40,13 @@ public class  WishlistTests extends BaseTests{
     @Test
     public void removeProductFromWishlist(){
         ProductPage productPage = new ProductPage(browser).go(calculusSlug).addToWishlist();
-        //WebDriverWait wait = new WebDriverWait(browser.driver, Duration.ofSeconds(5), Duration.ofSeconds(1));
+
         Wait<WebDriver> wait = new FluentWait<WebDriver>(browser.driver)
                 .withTimeout(Duration.ofSeconds(5))
                         .pollingEvery(Duration.ofSeconds(1))
                                 .ignoring(NoSuchElementException.class);
-        productPage.waitToBePresent(deleteItem,5);
-        productPage.removeFromList().waitToBePresent(addToWishlist, 5);
-        Assertions.assertDoesNotThrow(() -> productPage.waitToBePresent(addToWishlist,5),"Product has not been removed from wishlist");
+        productPage.removeFromList(5);
+
+        Assertions.assertDoesNotThrow(() -> productPage.waitToBeDeleted(5),"Product has not been removed from wishlist");
     }
 }

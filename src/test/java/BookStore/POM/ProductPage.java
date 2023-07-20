@@ -36,11 +36,9 @@ public class ProductPage extends BasePage{
     public void openMiniCart() {
         driver.findElement(miniCart).click();
     }
-    public void waitToBePresent(String locator, int seconds) {
+    public WebElement priceInMiniCart(int seconds){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(locator)));
-    }
-    public WebElement priceInMiniCart(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(totalPriceInMiniCart));
         return driver.findElement(totalPriceInMiniCart);
     }
     public WebElement priceInHeader(){
@@ -51,9 +49,15 @@ public class ProductPage extends BasePage{
         waitForLoadingIconDisappear();
         return this;
     }
-    public ProductPage removeFromList() {
+    public void removeFromList(int seconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+        wait.until(ExpectedConditions.presenceOfElementLocated(removeFromWishlist));
         driver.findElement(removeFromWishlist).click();
         waitForLoadingIconDisappear();
-        return this;
+        wait.until(ExpectedConditions.presenceOfElementLocated(addToWishlist));
+    }
+    public void waitToBeDeleted(int seconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+        wait.until(ExpectedConditions.presenceOfElementLocated(addToWishlist));
     }
 }
