@@ -10,7 +10,6 @@ import org.openqa.selenium.WebElement;
 public class CartTests extends BaseTests{
     String calculusSlug = "/calculus-made-easy-by-silvanus-p-thompson/";
     String historyOfAstronomySlug = "/a-popular-history-of-astronomy-during-the-nineteenth-century-by-agnes-m-clerke/";
-    private final String totalPriceInMiniCart = ".wc-block-components-totals-item__value";
 
     @Test
     public void noProductAddedToCartShouldCartBeEmpty(){
@@ -81,10 +80,9 @@ public class CartTests extends BaseTests{
     public void addProductToCartShouldShowProductPriceInMiniCart() {
         ProductPage productPage = new ProductPage(browser);
         productPage.go(historyOfAstronomySlug).addToCart().openMiniCart();
-        productPage.waitToBePresent(totalPriceInMiniCart, 5);
 
         Assertions.assertEquals("12,00 €",
-                productPage.priceInMiniCart().getText(),
+                productPage.priceInMiniCart(5).getText(),
                 "The price displayed in minicart is not correct.");
     }
     @Test

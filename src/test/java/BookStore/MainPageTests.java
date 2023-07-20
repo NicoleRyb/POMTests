@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class MainPageTests extends BaseTests{
     @Test
-    public void sortByPriceTest(){
+    public void sortByPriceShouldFirstOneBeTheLowest(){
         MainPage mainPage = new MainPage(browser);
         mainPage.go();
         mainPage.sortByPrice();

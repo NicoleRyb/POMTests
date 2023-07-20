@@ -15,7 +15,6 @@ public abstract class BasePage {
         this.driver = browser.driver;
         baseURL = browser.baseURL;
     }
-
     public void waitForLoadingIconDisappear(){
         browser.wait.until(ExpectedConditions.numberOfElementsToBe(loadingIcon, 0));
     }
