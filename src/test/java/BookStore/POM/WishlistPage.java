@@ -1,6 +1,7 @@
 package BookStore.POM;
 
 import BookStore.helpers.Browser;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.By;
 
 public class WishlistPage extends BasePage{
