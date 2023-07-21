@@ -3,12 +3,15 @@ package BookStore;
 import BookStore.POM.CheckoutPage;
 import BookStore.POM.ProductPage;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("Checkout Tests")
 public class CheckoutTests extends BaseTests {
     String calculusSlug = "/calculus-made-easy-by-silvanus-p-thompson/";
 
     @Test
+    @DisplayName("Entered valid checkout data so the order should be placed")
     public void validCheckoutDataShouldOrderBePlaced() throws InterruptedException {
 
         ProductPage productPage = new ProductPage(browser);
@@ -42,6 +45,6 @@ public class CheckoutTests extends BaseTests {
         checkoutPage.placeOrder();
         checkoutPage.waitForLoadingIconDisappear();
 
-        Assertions.assertEquals("Order received", checkoutPage.checkTitle().getText(), "\"Order received\" text is not found in the header. Order was probably not successful.");
+        Assertions.assertEquals("Order received", checkoutPage.getTitle().getText(), "\"Order received\" text is not found in the header. Order was probably not successful.");
     }
 }
