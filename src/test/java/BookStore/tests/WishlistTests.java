@@ -1,4 +1,4 @@
-package BookStore;
+package BookStore.tests;
 
 import BookStore.POM.MainPage;
 import BookStore.POM.ProductPage;
@@ -10,7 +10,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 

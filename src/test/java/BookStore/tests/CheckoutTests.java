@@ -1,4 +1,4 @@
-package BookStore;
+package BookStore.tests;
 
 import BookStore.POM.CheckoutPage;
 import BookStore.POM.ProductPage;

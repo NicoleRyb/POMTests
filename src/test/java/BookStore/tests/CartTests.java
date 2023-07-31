@@ -1,4 +1,4 @@
-package BookStore;
+package BookStore.tests;
 
 import BookStore.POM.CartPage;
 import BookStore.POM.ProductPage;
@@ -59,7 +59,7 @@ public class CartTests extends BaseTests{
         cartPage.waitToDisappear();
 
         Assertions.assertEquals("39,00 €",
-                cartPage.getText(),
+                cartPage.getPrice(),
                 "Total price after quantity update is not what expected.");
     }
     @Test
@@ -70,7 +70,7 @@ public class CartTests extends BaseTests{
                 .go(calculusSlug).addToCart().goToCart().changeQuantity(-3);
 
         Assertions.assertEquals("13,00 €",
-                cartPage.getText(),
+                cartPage.getPrice(),
                 "Total price is not what expected.");
     }
     @Test
@@ -80,7 +80,7 @@ public class CartTests extends BaseTests{
         productPage.go(calculusSlug).addToCart();
         CartPage cartPage = new CartPage(browser);
         cartPage.go();
-        WebElement updateCart = cartPage.findElement();
+        WebElement updateCart = cartPage.findUpdateButton();
 
         Assertions.assertFalse(updateCart.isEnabled(),
                 "Update button is enabled while it shouldn't. There were no changes.");

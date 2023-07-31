@@ -1,4 +1,4 @@
-package BookStore;
+package BookStore.tests;
 
 import BookStore.POM.MainPage;
 import org.junit.jupiter.api.Assertions;
