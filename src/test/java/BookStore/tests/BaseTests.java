@@ -1,4 +1,4 @@
-package BookStore;
+package BookStore.tests;
 
 import BookStore.helpers.*;
 import org.junit.jupiter.api.AfterEach;

@@ -32,11 +32,11 @@ public class CartPage extends BasePage{
         waitForLoadingIconDisappear();
     }
 
-    public String getText() {
+    public String getPrice() {
         return driver.findElement(totalPrice).getText();
     }
 
-    public WebElement findElement(){
+    public WebElement findUpdateButton(){
         return driver.findElement(updateCart);
     }
 
